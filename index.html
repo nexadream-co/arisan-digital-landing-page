@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arisan Digital — Kelola Arisan Lebih Mudah, Cepat & Transparan</title>
+    <meta name="description"
+        content="Arisan Digital adalah aplikasi pengelolaan arisan terlengkap di Indonesia. Kelola grup, peserta, pembayaran, dan undian secara digital. Digunakan oleh 10.000+ pengguna dengan rating 4.4/5 di Play Store.">
+    <meta name="keywords"
+        content="arisan digital, aplikasi arisan, kelola arisan online, arisan online, undian arisan, aplikasi arisan android, arisan grup">
+    <meta name="author" content="NexaDream">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arisandigital.nexadream.id">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Arisan Digital — Kelola Arisan Lebih Mudah & Transparan">
+    <meta property="og:description"
+        content="Aplikasi pengelolaan arisan terlengkap di Indonesia. Digunakan 10.000+ pengguna.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arisandigital.nexadream.id">
+    <meta property="og:image" content="assets/screenshoot/home.jpeg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arisan Digital — Kelola Arisan Lebih Mudah & Transparan">
+    <meta name="twitter:description"
+        content="Aplikasi pengelolaan arisan terlengkap di Indonesia. Digunakan 10.000+ pengguna.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Arisan Digital",
+    "operatingSystem": "Android",
+    "applicationCategory": "FinanceApplication",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.4", "ratingCount": "10000" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "IDR" },
+    "description": "Aplikasi pengelolaan arisan terlengkap di Indonesia"
+  }
+  </script>
+</head>
+
+<body class="bg-white text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#beranda" class="flex items-center gap-3">
+                    <img src="assets/logo/arisan-digital.jpg" alt="Arisan Digital Logo"
+                        class="w-10 h-10 rounded-xl shadow-lg shadow-blue-200 object-cover">
+                    <span class="text-xl font-bold text-gray-800">Arisan <span
+                            class="gradient-text">Digital</span></span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#beranda"
+                        class="nav-link text-gray-600 hover:text-blue-600 transition font-medium text-sm">Beranda</a>
+                    <a href="#fitur"
+                        class="nav-link text-gray-600 hover:text-blue-600 transition font-medium text-sm">Fitur</a>
+                    <a href="#cara-kerja"
+                        class="nav-link text-gray-600 hover:text-blue-600 transition font-medium text-sm">Cara Kerja</a>
+                    <a href="#screenshot"
+                        class="nav-link text-gray-600 hover:text-blue-600 transition font-medium text-sm">Screenshot</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.caraguna.arisan.digital" target="_blank"
+                        class="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-blue-200 transition-all duration-300 hover:-translate-y-0.5">
+                        <i class="fab fa-google-play mr-2"></i>Dapatkan Aplikasi
+                    </a>
+                </div>
+                <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition">
+                    <i id="menu-icon" class="fas fa-bars text-xl text-gray-700"></i>
+                    <i id="close-icon" class="fas fa-times text-xl text-gray-700 hidden"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-t shadow-xl">
+            <div class="px-6 py-4 space-y-3">
+                <a href="#beranda" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Beranda</a>
+                <a href="#fitur" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Fitur</a>
+                <a href="#cara-kerja" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Cara Kerja</a>
+                <a href="#screenshot" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Screenshot</a>
+                <a href="https://play.google.com/store/apps/details?id=com.caraguna.arisan.digital" target="_blank"
+                    class="block bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center py-3 rounded-xl font-semibold mt-2">
+                    <i class="fab fa-google-play mr-2"></i>Dapatkan Aplikasi
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero-gradient min-h-screen flex items-center relative overflow-hidden pt-20">
+        <div class="blob-1 -top-20 -right-20"></div>
+        <div class="blob-1 bottom-20 -left-40" style="width:500px;height:500px;"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-0">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-on-scroll">
+                    <div
+                        class="inline-flex items-center gap-2 bg-white/80 backdrop-blur rounded-full px-4 py-2 shadow-sm mb-6">
+                        <span class="flex h-2 w-2 rounded-full bg-green-500"></span>
+                        <span class="text-sm font-medium text-gray-600">Digunakan 10.000+ pengguna di Indonesia</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                        Kelola Arisan<br>
+                        <span class="gradient-text">Lebih Mudah</span><br>
+                        & Transparan
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg">
+                        Aplikasi arisan digital terlengkap untuk mengelola grup, peserta, pembayaran, dan undian
+                        pemenang secara otomatis. Semua dalam satu aplikasi.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                        <a href="https://play.google.com/store/apps/details?id=com.caraguna.arisan.digital"
+                            target="_blank"
+                            class="relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-blue-300 transition-all duration-300 hover:-translate-y-1 cta-pulse">
+                            <i class="fab fa-google-play text-2xl"></i>
+                            <div class="text-left">
+                                <span class="text-xs opacity-80 block">Download di</span>
+                                <span>Google Play</span>
+                            </div>
+                        </a>
+                        <a href="#fitur"
+                            class="inline-flex items-center justify-center gap-2 bg-white text-gray-700 px-8 py-4 rounded-2xl font-semibold text-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                            <i class="fas fa-play-circle text-blue-500"></i> Pelajari Fitur
+                        </a>
+                    </div>
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-gray-900 counter" data-target="10000"
+                                data-suffix="+">0</div>
+                            <div class="text-sm text-gray-500 mt-1">Pengguna Aktif</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-gray-900 counter" data-target="50000"
+                                data-suffix="+">0</div>
+                            <div class="text-sm text-gray-500 mt-1">Grup Dibuat</div>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1">
+                                <span class="text-2xl sm:text-3xl font-extrabold text-gray-900">4.4</span>
+                                <i class="fas fa-star text-yellow-400 text-lg"></i>
+                            </div>
+                            <div class="text-sm text-gray-500 mt-1">Rating Play Store</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hero Phone -->
+                <div class="relative flex justify-center animate-on-scroll">
+                    <div class="animate-float relative z-10">
+                        <div class="phone-frame w-64 sm:w-72 mx-auto">
+                            <img src="assets/screenshoot/home.jpeg" alt="Tampilan utama aplikasi Arisan Digital"
+                                class="w-full" loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="animate-float-delay absolute -right-4 top-20 z-20 bg-white rounded-2xl shadow-2xl p-4 flex items-center gap-3">
+                        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-sm text-gray-800">Pembayaran Berhasil</div>
+                            <div class="text-xs text-gray-500">Rp 200.000</div>
+                        </div>
+                    </div>
+                    <div
+                        class="animate-float absolute -left-4 bottom-32 z-20 bg-white rounded-2xl shadow-2xl p-4 flex items-center gap-3">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-trophy text-blue-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-sm text-gray-800">Pemenang Baru!</div>
+                            <div class="text-xs text-gray-500">Periode ke-5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Wave divider -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
+                    fill="white" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="animate-on-scroll bg-gradient-to-r from-blue-50 to-sky-50 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="flex -space-x-3">
+                        <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Siti&backgroundColor=b6e3f4"
+                            class="w-12 h-12 rounded-full border-3 border-white shadow" alt="User">
+                        <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Budi&backgroundColor=c0aede"
+                            class="w-12 h-12 rounded-full border-3 border-white shadow" alt="User">
+                        <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Dewi&backgroundColor=ffd5dc"
+                            class="w-12 h-12 rounded-full border-3 border-white shadow" alt="User">
+                        <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Ahmad&backgroundColor=d1f4d1"
+                            class="w-12 h-12 rounded-full border-3 border-white shadow" alt="User">
+                        <div
+                            class="w-12 h-12 rounded-full bg-blue-600 border-3 border-white shadow flex items-center justify-center text-white text-xs font-bold">
+                            10K+</div>
+                    </div>
+                    <div>
+                        <div class="font-bold text-gray-800">Dipercaya Ribuan Pengguna</div>
+                        <div class="flex items-center gap-1 mt-1">
+                            <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i
+                                class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i
+                                class="fas fa-star-half-alt text-yellow-400"></i>
+                            <span class="text-sm text-gray-500 ml-1">4.4 / 5 dari Play Store</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.caraguna.arisan.digital" target="_blank"
+                    class="flex items-center gap-3 bg-white rounded-2xl px-6 py-4 shadow-md hover:shadow-lg transition group">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                        alt="Google Play" class="h-10">
+                    <i class="fas fa-arrow-right text-blue-500 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="fitur" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span
+                    class="inline-block bg-blue-100 text-blue-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">FITUR
+                    UNGGULAN</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">Semua yang Anda
+                    Butuhkan<br>dalam <span class="gradient-text">Satu Aplikasi</span></h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Fitur lengkap untuk mengelola arisan grup Anda dari
+                    awal hingga selesai, semua serba otomatis dan transparan.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div
+                    class="feature-card animate-on-scroll bg-white border border-gray-100 rounded-3xl p-8 hover:border-blue-100">
+                    <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6"><i
+                            class="fas fa-users text-blue-600 text-xl"></i></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Kelola Peserta</h3>
+                    <p class="text-gray-500 leading-relaxed">Tambah, edit, dan organisir semua anggota grup arisan Anda
+                        dengan mudah. Kelola data peserta dalam satu tempat.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div
+                    class="feature-card animate-on-scroll bg-white border border-gray-100 rounded-3xl p-8 hover:border-green-100">
+                    <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-6"><i
+                            class="fas fa-money-check-alt text-green-600 text-xl"></i></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Lacak Pembayaran</h3>
+                    <p class="text-gray-500 leading-relaxed">Pantau status pembayaran secara real-time. Lihat siapa yang
+                        sudah dan belum membayar iuran arisan.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div
+                    class="feature-card animate-on-scroll bg-white border border-gray-100 rounded-3xl p-8 hover:border-purple-100">
+                    <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center mb-6"><i
+                            class="fas fa-random text-purple-600 text-xl"></i></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Sistem Undian</h3>
+                    <p class="text-gray-500 leading-relaxed">Sistem undian digital yang adil dan transparan untuk
+                        memilih pemenang setiap periode arisan.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div
+                    class="feature-card animate-on-scroll bg-white border border-gray-100 rounded-3xl p-8 hover:border-amber-100">
+                    <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mb-6"><i
+                            class="fas fa-history text-amber-600 text-xl"></i></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Riwayat Lengkap</h3>
+                    <p class="text-gray-500 leading-relaxed">Akses riwayat lengkap pemenang, pembayaran, dan periode
+                        kapan saja tanpa ribet.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div
+                    class="feature-card animate-on-scroll bg-white border border-gray-100 rounded-3xl p-8 hover:border-red-100">
+                    <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center mb-6"><i
+                            class="fas fa-bell text-red-500 text-xl"></i></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Notifikasi Pintar</h3>
+                    <p class="text-gray-500 leading-relaxed">Pengingat otomatis untuk peserta yang belum menyetor
+                        kontribusi iuran arisan tepat waktu.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div
+                    class="feature-card animate-on-scroll bg-white border border-gray-100 rounded-3xl p-8 hover:border-teal-100">
+                    <div class="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center mb-6"><i
+                            class="fas fa-link text-teal-600 text-xl"></i></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Undangan Mudah</h3>
+                    <p class="text-gray-500 leading-relaxed">Undang anggota baru atau minta bergabung dengan link
+                        undangan dan QR Code yang mudah dibagikan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section id="cara-kerja" class="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span
+                    class="inline-block bg-blue-100 text-blue-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">CARA
+                    KERJA</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">Mulai Arisan
+                    Digital<br>dalam <span class="gradient-text">4 Langkah Mudah</span></h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Proses yang sangat mudah untuk memulai dan mengelola
+                    arisan Anda secara digital.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="animate-on-scroll text-center group">
+                    <div
+                        class="relative mx-auto w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-400 rounded-3xl flex items-center justify-center mb-6 shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-download text-white text-2xl"></i>
+                        <span
+                            class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full shadow text-blue-600 font-bold text-sm flex items-center justify-center">1</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Download Aplikasi</h3>
+                    <p class="text-gray-500 text-sm">Unduh aplikasi Arisan Digital dari Google Play Store secara gratis.
+                    </p>
+                </div>
+                <div class="animate-on-scroll text-center group">
+                    <div
+                        class="relative mx-auto w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-400 rounded-3xl flex items-center justify-center mb-6 shadow-lg shadow-green-200 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-user-plus text-white text-2xl"></i>
+                        <span
+                            class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full shadow text-green-600 font-bold text-sm flex items-center justify-center">2</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Buat Grup Arisan</h3>
+                    <p class="text-gray-500 text-sm">Buat grup baru, atur periode, nominal iuran, dan tanggal kocok
+                        arisan.</p>
+                </div>
+                <div class="animate-on-scroll text-center group">
+                    <div
+                        class="relative mx-auto w-20 h-20 bg-gradient-to-br from-purple-500 to-violet-400 rounded-3xl flex items-center justify-center mb-6 shadow-lg shadow-purple-200 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-user-friends text-white text-2xl"></i>
+                        <span
+                            class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full shadow text-purple-600 font-bold text-sm flex items-center justify-center">3</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Undang Peserta</h3>
+                    <p class="text-gray-500 text-sm">Bagikan link undangan atau QR Code kepada calon peserta arisan
+                        Anda.</p>
+                </div>
+                <div class="animate-on-scroll text-center group">
+                    <div
+                        class="relative mx-auto w-20 h-20 bg-gradient-to-br from-amber-500 to-orange-400 rounded-3xl flex items-center justify-center mb-6 shadow-lg shadow-amber-200 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-trophy text-white text-2xl"></i>
+                        <span
+                            class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full shadow text-amber-600 font-bold text-sm flex items-center justify-center">4</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Mulai Kocok!</h3>
+                    <p class="text-gray-500 text-sm">Kocok arisan secara digital, adil dan transparan. Pemenang langsung
+                        terumumkan!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshot" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span
+                    class="inline-block bg-blue-100 text-blue-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">TAMPILAN
+                    APLIKASI</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">Antarmuka yang <span
+                        class="gradient-text">Intuitif & Modern</span></h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Desain yang bersih dan mudah digunakan oleh siapa
+                    saja, dari pemula hingga yang sudah berpengalaman.</p>
+            </div>
+            <div class="relative">
+                <div class="overflow-hidden mx-auto max-w-5xl">
+                    <div id="screenshot-track" class="flex gap-6">
+                        <div class="screenshot-slide flex-shrink-0 w-60 sm:w-72 text-center">
+                            <div class="phone-frame">
+                                <img src="assets/screenshoot/home.jpeg" alt="Halaman utama Arisan Digital"
+                                    class="w-full" loading="lazy">
+                            </div>
+                            <p class="mt-4 font-semibold text-gray-700">Beranda</p>
+                            <p class="text-sm text-gray-400">Dashboard utama arisan</p>
+                        </div>
+                        <div class="screenshot-slide flex-shrink-0 w-60 sm:w-72 text-center">
+                            <div class="phone-frame">
+                                <img src="assets/screenshoot/group-detail.jpeg" alt="Detail grup arisan" class="w-full"
+                                    loading="lazy">
+                            </div>
+                            <p class="mt-4 font-semibold text-gray-700">Detail Grup</p>
+                            <p class="text-sm text-gray-400">Informasi lengkap grup</p>
+                        </div>
+                        <div class="screenshot-slide flex-shrink-0 w-60 sm:w-72 text-center">
+                            <div class="phone-frame">
+                                <img src="assets/screenshoot/winner.jpeg" alt="Pemenang arisan" class="w-full"
+                                    loading="lazy">
+                            </div>
+                            <p class="mt-4 font-semibold text-gray-700">Pemenang</p>
+                            <p class="text-sm text-gray-400">Pengumuman pemenang</p>
+                        </div>
+                        <div class="screenshot-slide flex-shrink-0 w-60 sm:w-72 text-center">
+                            <div class="phone-frame">
+                                <img src="assets/screenshoot/profile.jpeg" alt="Halaman profil pengguna" class="w-full"
+                                    loading="lazy">
+                            </div>
+                            <p class="mt-4 font-semibold text-gray-700">Profil</p>
+                            <p class="text-sm text-gray-400">Pengaturan akun</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel controls -->
+                <button id="prev-btn"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-blue-50 transition z-10">
+                    <i class="fas fa-chevron-left text-blue-600"></i>
+                </button>
+                <button id="next-btn"
+                    class="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-blue-50 transition z-10">
+                    <i class="fas fa-chevron-right text-blue-600"></i>
+                </button>
+                <div class="flex justify-center gap-2 mt-8">
+                    <div class="carousel-dot w-8 h-3 rounded-full bg-blue-600 transition-all"></div>
+                    <div class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all"></div>
+                    <div class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all"></div>
+                    <div class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span
+                    class="inline-block bg-blue-100 text-blue-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">TESTIMONI</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Apa Kata <span
+                        class="gradient-text">Pengguna Kami</span></h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="animate-on-scroll bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex gap-1 mb-4"><i class="fas fa-star text-yellow-400"></i><i
+                            class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i
+                            class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i></div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">"Sangat membantu dalam mengelola arisan komplek
+                        perumahan kami. Tidak perlu lagi catat manual di buku, semua otomatis!"</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Siti&backgroundColor=b6e3f4"
+                            class="w-11 h-11 rounded-full" alt="Siti Rahayu">
+                        <div>
+                            <div class="font-semibold text-gray-800 text-sm">Siti Rahayu</div>
+                            <div class="text-xs text-gray-400">Ketua Arisan RT 05</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="animate-on-scroll bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex gap-1 mb-4"><i class="fas fa-star text-yellow-400"></i><i
+                            class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i
+                            class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i></div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">"Fitur kocok arisannya adil dan transparan. Semua
+                        anggota bisa melihat hasilnya langsung. Recommended!"</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Budi&backgroundColor=c0aede"
+                            class="w-11 h-11 rounded-full" alt="Budi Santoso">
+                        <div>
+                            <div class="font-semibold text-gray-800 text-sm">Budi Santoso</div>
+                            <div class="text-xs text-gray-400">Anggota Arisan Kantor</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="animate-on-scroll bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex gap-1 mb-4"><i class="fas fa-star text-yellow-400"></i><i
+                            class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i
+                            class="fas fa-star text-yellow-400"></i><i class="fas fa-star-half-alt text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">"Aplikasinya simpel tapi lengkap. Saya bisa pantau
+                        siapa yang belum bayar tanpa harus tanya satu-satu."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Dewi&backgroundColor=ffd5dc"
+                            class="w-11 h-11 rounded-full" alt="Dewi Anggraini">
+                        <div>
+                            <div class="font-semibold text-gray-800 text-sm">Dewi Anggraini</div>
+                            <div class="text-xs text-gray-400">Bendahara Arisan PKK</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800"></div>
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: url('data:image/svg+xml,<svg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><g fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;><g fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.4&quot;><path d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/></g></g></svg>');">
+        </div>
+        <div class="relative max-w-4xl mx-auto px-4 text-center animate-on-scroll">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">Siap Kelola Arisan<br>Secara
+                Digital?</h2>
+            <p class="text-blue-100 text-lg mb-10 max-w-2xl mx-auto">Bergabung dengan 10.000+ pengguna yang sudah
+                mempercayakan pengelolaan arisan mereka kepada Arisan Digital.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.caraguna.arisan.digital" target="_blank"
+                class="inline-flex items-center gap-3 bg-white text-blue-700 px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <i class="fab fa-google-play text-2xl"></i> Download Gratis Sekarang
+            </a>
+            <p class="text-blue-200 text-sm mt-6"><i class="fab fa-android mr-1"></i> Tersedia untuk Android di Google
+                Play Store</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span
+                    class="inline-block bg-blue-100 text-blue-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">HUBUNGI
+                    KAMI</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Punya Pertanyaan? <span
+                        class="gradient-text">Kami Siap Membantu</span></h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="animate-on-scroll text-center bg-gray-50 rounded-3xl p-8 hover:bg-blue-50 transition group">
+                    <div
+                        class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-2">Email</h3>
+                    <a href="mailto:halo@nexadream.id"
+                        class="text-blue-600 hover:underline text-sm">halo@nexadream.id</a>
+                </div>
+                <div
+                    class="animate-on-scroll text-center bg-gray-50 rounded-3xl p-8 hover:bg-green-50 transition group">
+                    <div
+                        class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fab fa-whatsapp text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-2">WhatsApp</h3>
+                    <a href="https://wa.me/6285159664106" target="_blank"
+                        class="text-green-600 hover:underline text-sm">+62 851-5966-4106</a>
+                </div>
+                <div class="animate-on-scroll text-center bg-gray-50 rounded-3xl p-8 hover:bg-red-50 transition group">
+                    <div
+                        class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-map-marker-alt text-red-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-2">Lokasi</h3>
+                    <p class="text-gray-500 text-sm">Jember, Jawa Timur<br>Indonesia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="assets/logo/arisan-digital.jpg" alt="Arisan Digital Logo"
+                            class="w-10 h-10 rounded-xl object-cover">
+                        <span class="text-xl font-bold text-white">Arisan Digital</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6 max-w-md">Aplikasi pengelolaan arisan terlengkap di
+                        Indonesia. Kelola grup, peserta, pembayaran, dan undian pemenang secara digital, adil, dan
+                        transparan.</p>
+                    <div class="flex gap-4">
+                        <a href="mailto:halo@nexadream.id"
+                            class="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-blue-600 transition"><i
+                                class="fas fa-envelope text-sm"></i></a>
+                        <a href="https://wa.me/6285159664106" target="_blank"
+                            class="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-green-600 transition"><i
+                                class="fab fa-whatsapp text-sm"></i></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.caraguna.arisan.digital"
+                            target="_blank"
+                            class="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-blue-600 transition"><i
+                                class="fab fa-google-play text-sm"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Menu</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#beranda" class="hover:text-white transition">Beranda</a></li>
+                        <li><a href="#fitur" class="hover:text-white transition">Fitur</a></li>
+                        <li><a href="#cara-kerja" class="hover:text-white transition">Cara Kerja</a></li>
+                        <li><a href="#screenshot" class="hover:text-white transition">Screenshot</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Kontak</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-envelope text-xs"></i> halo@nexadream.id
+                        </li>
+                        <li class="flex items-center gap-2"><i class="fab fa-whatsapp text-xs"></i> +62 851-5966-4106
+                        </li>
+                        <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-xs"></i> Jember, Jawa
+                            Timur</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-sm">&copy; 2026 Arisan Digital. All rights reserved.</p>
+                <p class="text-sm">Powered by <a href="https://nexadream.id" target="_blank"
+                        class="text-blue-400 hover:text-blue-300 font-semibold transition">nexadream.id</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
